@@ -25,7 +25,7 @@ app.add_middleware(
 )
 
 
-# ✅ Change 1 — Add base_url parameter for OpenRouter
+# Add base_url parameter for OpenRouter
 client = OpenAI(
     api_key=os.getenv("OPENAI_API_KEY"),
     base_url=os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1")
@@ -39,7 +39,7 @@ class ChatRequest(BaseModel):
 @app.post("/chat")
 async def chat_with_ai(request: ChatRequest):
     try:
-        # ✅ Change 2 — same model name, works via OpenRouter
+        # same model name, works via OpenRouter
         response = client.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[{"role": "user", "content": request.message}],
