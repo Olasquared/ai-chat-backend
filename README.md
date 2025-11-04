@@ -16,9 +16,3 @@ This project is a backend API for an AI-powered chatbot, built with FastAPI and 
 - Uvicorn (server)
 - JavaScript/HTML frontend for testing (optional)
 
-## Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/<USERNAME>/ai-chat-backend.git
-   cd ai-chat-backend
